@@ -1,2 +1,70 @@
-H1 {
-    color: red;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-sérif;
+  }
+
+header {
+   
+    margin-bottom: 4px;
+    padding: 30px ;
+}
+
+header img {
+    display: block;
+    height: auto;
+    width: 200px;
+    margin: 0 auto;
+  }
+  .accueil-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    background-color: #f4f4f4;
+  }
+   .accueil-localisation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    background-color:#eaeaea;
+    width: 100%;
+    padding: 15px 0;
+  }
+  .accueil-localisation i {
+    font-size: 17px;
+    margin-right: 20px;
+    color:#555;
+  }
+.accueil-localisation p {
+    font-size: 17px;
+    width: 150px;
+    font-weight: 700;
+    color: #555;
+  }
+  .accueil-card h1 {
+    width: 80%;
+    margin: 25px auto 10px auto;
+  }
+  .accueil-card p {
+    font-size: 19;
+    color: #696767;
+  }
+  
+  button {
+    padding: 15px 30px;
+    margin-bottom: 50px;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    background: linear-gradient(184deg, rgb(255, 121, 218) 24%, rgb(147, 86, 220) 100%);
+    color: rgb(230, 228, 228);
+    border: none;
+    box-shadow: 0px 7px 15px -10px #000000;
+    cursor: pointer;
+  }
+  button:hover {
+    box-shadow: 0px 7px 20px -5px #000000;
+    filter: brightness(110%);
+  }
