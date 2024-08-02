@@ -1,0 +1,99 @@
+.resto_carte {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: -30px auto 0px auto;
+    border-radius: 30px;
+    background-color: rgb(247, 244, 244);
+
+    .resto_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 92%;
+        margin: 0 auto;
+        font-size: 19px;
+        font-family: $logo_title;
+        padding: 30px 0;
+            i {
+                font-size: 30px;
+                margin-right: 30px;
+                color: black;
+            }
+    }
+
+}
+
+.entree, .plats, .desserts {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+    margin: 0 auto 20px auto;
+    
+     h2 {
+        font-size: 16px;
+        font-weight: lighter;
+        text-transform: uppercase;
+        width: 40px;
+        padding-bottom: 5px;
+        border-bottom: 3px solid $tertiary_color;
+    }
+
+}
+
+.entree__carte,
+.plats__carte,
+.desserts__carte {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.carte__item {
+    background-color: white;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 15px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.109);
+    @include box-shadow(2px, 2px, 12px, -9px);
+
+        .bloc_1 {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            font-weight: 500;
+            align-items: center;
+
+                .bloc__texte {
+                    h3 {
+                        margin-bottom: 4px;
+                    }
+
+                    p {
+                        font-weight: lighter;
+                        
+                    }
+
+                }
+
+                .price {
+                    align-self: flex-end;
+                    font-size: 15px;
+                    margin: 0 15px;
+                    font-weight: 700;
+                }
+        }
+ 
+
+}
+
+.resto_button {
+    display: block;
+    margin: 20px auto 100px auto;
+}
+.background_img {
+    background-size: cover;
+    height: 300px;
+    width: 100%;}
+    
+   
