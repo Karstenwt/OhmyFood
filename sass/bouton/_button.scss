@@ -4,14 +4,14 @@ button {
     border-radius: 40px;
     font-size: 18px;
     font-weight: 500;
-    background: linear-gradient(184deg, rgba(255,121,218,1) 24%, rgba(147,86,220,1) 100%);
+    background: linear-gradient(180deg, $secondary_color,$primary_color);
     color: rgb(230, 228, 228);
     border: none;
     @include box-shadow();
     cursor: pointer;
 
     &:hover {
-        @include box-shadow($blur:20px, $spread:-5px);
+        @include box-shadow($blur:20px, $spread:-10px);
         filter: brightness(110%);
     }
 

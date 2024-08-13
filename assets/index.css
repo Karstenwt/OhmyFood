@@ -1,20 +1,41 @@
-.heart__box i {
+.heart__box {
   position: relative;
-  font-size: 2rem;
+  margin-right: 25px;
+  cursor: pointer;
 }
-
-.heart__full {
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 2s;
-}
-
-.heart__full:hover {
-  opacity: 1;
-  color: transparent;
-  background-image: linear-gradient(184degrgb 255, 121, 218 24%, rgb(147, 86, 220) 100%);
+.heart__box .heart__full {
+  position: absolute;
+  font-size: 23px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, #9356DC, 30%, #FF79DA);
   background-clip: text;
-  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heart__box .heart__full:hover {
+  z-index: 999;
+}
+.heart__box .heart__full::after {
+  content: "f004";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #f4f4f4;
+  height: 100%;
+  transition: all 1s;
+}
+.heart__box .heart__full:hover::after {
+  height: 0%;
+  z-index: 999;
+}
+.heart__box .heart__empty {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 23px;
+}
+.heart__box .heart__empty:hover {
+  z-index: -999;
 }
 
 * {
@@ -33,14 +54,14 @@ button {
   border-radius: 40px;
   font-size: 18px;
   font-weight: 500;
-  background: linear-gradient(184deg, rgb(255, 121, 218) 24%, rgb(147, 86, 220) 100%);
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
   color: rgb(230, 228, 228);
   border: none;
   box-shadow: 0px 7px 15px -10px #000000;
   cursor: pointer;
 }
 button:hover {
-  box-shadow: 0px 7px 20px -5px #000000;
+  box-shadow: 0px 7px 20px -10px #000000;
   filter: brightness(110%);
 }
 
