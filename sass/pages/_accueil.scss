@@ -1,0 +1,221 @@
+// ===accueil=====//
+
+.accueil__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    background-color: #f4f4f4;
+    
+    .accueil__localisation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(234, 234, 234);
+        width: 100%;
+        padding: 15px 0;
+
+        i {
+            font-size: 17px;
+            margin-right: 20px;
+            color: #555;
+        }
+        
+        p {
+            font-size: 17px;
+            width: 150px;
+            font-weight: 600;
+            color: #555;
+            
+            
+        }
+        }
+
+    .accueil__card {
+        font-size: 20px;
+        text-align: center;
+        width: 90%;
+        max-height: 100%;
+        margin-top: 20px;
+
+        h1,p,button {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            width: 80%;
+            margin: 25px auto 10px auto;
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 19px;
+            color: #696767;
+        }
+    }
+
+}
+
+// ==================== fonctionnement =====================
+
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto 30px auto;
+
+     h2 {
+        font-size: 25px;
+    }
+
+}
+
+.fonctionnement__card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.fonctionnement__card__icon {
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    align-items: center;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 20px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.109);
+    @include box-shadow(2px, 2px, 12px, -9px);
+
+        &:hover {
+            background-color: #9256dc23;
+
+            i {
+                color:#9356DC;
+            }
+        }
+
+        i {
+            margin: 0 20px 0 10px;
+            font-size: 20px;
+            color: gray;
+        }
+
+        .fa-circle
+         {
+            color: $primary_color;
+            font-size: 25px;
+            margin-left: -36px;
+
+            &_1 {
+                &::after {
+                    content: '1';
+                    color: white;
+                    font-size: 11px;
+                    position: relative;
+                    right: 15px;
+                    bottom: 5px;
+                }
+    
+            }
+
+            &_2 {
+                &::after {
+                    content: '2';
+                    color: white;
+                    font-size: 11px;
+                    position: relative;
+                    right: 15px;
+                    bottom: 5px;
+                }
+    
+            }
+
+            &_3 {
+                &::after {
+                    content: '3';
+                    color: white;
+                    font-size: 11px;
+                    position: relative;
+                    right: 15px;
+                    bottom: 5px;
+                }
+    
+            }
+
+ 
+        }
+
+       
+}
+// ==Restaurants ===//
+
+.restaurants {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0px;
+
+     h2 {
+        font-size: 25px;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+.restaurants__galerie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .restaurants__card {
+        width: 100%;
+        max-height: 250px;
+        border-radius: 20px 20px 20px 20px;
+        margin: 10px auto;
+        @include box-shadow(0px, 7px, 15px, -15px);
+
+        .container__img {
+            position: relative;
+
+            img {
+                border-radius: 20px 20px 0 0;
+                height: 177px;
+                width: 100%;
+                object-fit:cover;
+                object-position: bottom;
+            }
+
+            .img_position {
+                object-position: 50% 62%;
+            }
+
+            span {
+                position:absolute;
+                top:  7%;
+                right: 10px;
+                background-color: $tertiary_color;
+                color: rgb(10, 150, 87);
+                font-size: 0.7em;
+                font-weight: 500;
+                padding: 5px 10px;
+                border-radius: 2px;
+            }
+        }
+                
+        .restaurants__card__content {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            font-size: 15px;
+        }
+    }
+}
+
