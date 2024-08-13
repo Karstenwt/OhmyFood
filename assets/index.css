@@ -38,6 +38,97 @@
   z-index: -999;
 }
 
+.entree__carte .carte__item {
+  animation: Entree 1.5s ease forwards;
+  opacity: 0;
+}
+
+.plats__carte .carte__item {
+  animation: Plat 5.5s ease forwards;
+  opacity: 0;
+}
+
+.desserts__carte .carte__item {
+  animation: Dessert 9.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes Entree {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes Plat {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes Dessert {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.carte__item {
+  position: relative;
+  overflow: hidden;
+}
+.carte__item .bloc__1 .bloc__texte {
+  overflow: hidden;
+}
+.carte__item .bloc__1 .bloc__texte p, .carte__item .bloc__1 .bloc__texte h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.carte__item .bloc__1 .price {
+  transition: 0.3s;
+}
+.carte__item .bloc__2 {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  padding-top: 2px;
+  background: #99E2D0;
+  right: -150px;
+  top: 0px;
+  transition: 0.3s;
+}
+.carte__item .bloc__2 i {
+  font-size: 1.4em;
+  color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+  transform: rotate(90deg);
+  transition: all 300ms linear;
+}
+.carte__item:hover {
+  cursor: pointer;
+}
+.carte__item:hover .bloc__1 .price {
+  margin-right: 70px;
+}
+.carte__item:hover .bloc__2 {
+  right: -90px;
+}
+.carte__item:hover i {
+  transform: rotate(360deg);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -333,7 +424,7 @@ footer h4 {
   font-weight: lighter;
   text-transform: uppercase;
   width: 40px;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
   border-bottom: 3px solid #99E2D0;
 }
 
@@ -353,27 +444,27 @@ footer h4 {
   border-bottom: 3px solid rgba(0, 0, 0, 0.109);
   box-shadow: 2px 2px 12px -9px #000000;
 }
-.carte__item .bloc_1 {
+.carte__item .bloc__1 {
   display: flex;
   justify-content: space-between;
   font-size: 16px;
   font-weight: 500;
   align-items: center;
 }
-.carte__item .bloc_1 .bloc__texte h3 {
+.carte__item .bloc__1 .bloc__texte h3 {
   margin-bottom: 4px;
 }
-.carte__item .bloc_1 .bloc__texte p {
+.carte__item .bloc__1 .bloc__texte p {
   font-weight: lighter;
 }
-.carte__item .bloc_1 .price {
+.carte__item .bloc__1 .price {
   align-self: flex-end;
   font-size: 15px;
   margin: 0 15px;
   font-weight: 700;
 }
 
-.resto_button {
+.resto__button {
   display: block;
   margin: 20px auto 100px auto;
 }
