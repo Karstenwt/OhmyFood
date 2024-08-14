@@ -474,5 +474,38 @@ footer h4 {
     font-size: 12px;
   }
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .header__home img,
+  .header__resto img {
+    width: 230px;
+  }
+  .fonctionnement {
+    width: 85%;
+  }
+  .fonctionnement__card {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .fonctionnement__card__icon {
+    width: 400px;
+  }
+  .fonctionnement h2,
+  .restaurants h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .restaurants__galerie {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurants__galerie .restaurants__card {
+    width: 45%;
+  }
+  .resto_carte {
+    width: 85%;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
