@@ -23,8 +23,15 @@
 
     }
 }
+.header__resto img {
+    display: block;
+    height: auto;
+    width: 180px;
+    margin: 0 auto;
+    
+}
 
-.resto_carte {
+.resto__carte {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -32,7 +39,7 @@
     border-radius: 30px;
     background-color: rgb(247, 244, 244);
 
-    .resto_title {
+    .resto__title {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -118,10 +125,4 @@
     margin: 20px auto 100px auto;
 }
 
-// ==== Reduction taille texte en dessous de 400px ===//
 
-@media screen and (max-width: 400px) {
-    .bloc__texte {
-        font-size: 12px;
-    }
-}
