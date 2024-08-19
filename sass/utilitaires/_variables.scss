@@ -6,3 +6,11 @@ $logo_title: 'Shrikhand', cursive;
 $primary_color: #9356DC;
 $secondary_color: #FF79DA;
 $tertiary_color: #99E2D0;
+
+$gradient-loader : linear-gradient(to top, lighten($primary_color, 10%), $secondary_color, transparent, transparent);
+$cd-bars: #9356DC;
+$cd-bars-inv: #FF79DA;
+$size: 20px; // 
+$bar-height: 100px; 
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / 5;
