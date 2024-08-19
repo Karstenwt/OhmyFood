@@ -9,7 +9,8 @@
   top: 0;
   left: 0;
   background: linear-gradient(180deg, #9356DC, 30%, #FF79DA);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .heart__box .heart__full:hover {
@@ -347,11 +348,14 @@ footer h4 {
   border-radius: 20px 20px 0 0;
   height: 177px;
   width: 100%;
-  object-fit: cover;
-  object-position: bottom;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 .restaurants__galerie .restaurants__card .container__img .img_position {
-  object-position: 50% 62%;
+  -o-object-position: 50% 62%;
+     object-position: 50% 62%;
 }
 .restaurants__galerie .restaurants__card .container__img span {
   position: absolute;
@@ -476,7 +480,7 @@ footer h4 {
   margin: 20px auto 100px auto;
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) {
   .header__home img,
   .header__resto img {
     width: 230px;
@@ -505,9 +509,38 @@ footer h4 {
   .restaurants__galerie .restaurants__card {
     width: 45%;
   }
-  .resto_carte {
-    width: 85%;
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 120px;
+    padding: 0 40px;
+    align-items: center;
+    background-color: rgb(55, 54, 54); /* Couleur de fond du footer */
+  }
+  .footer__container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    padding-left: 550px;
+    flex-direction: row;
+  }
+  .footer__container_1 {
+    display: flex;
+    gap: 20px;
+  }
+  .footer__container_2 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .footer__container_2 p,
+  .footer__container_2 a {
+    margin-right: 15px;
+  }
+  footer h4 {
+    margin-right: auto;
   }
 }
-
-/*# sourceMappingURL=index.css.map */
+.resto_carte {
+  width: 85%;
+}/*# sourceMappingURL=style.css.map */

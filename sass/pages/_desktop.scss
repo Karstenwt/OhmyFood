@@ -1,5 +1,4 @@
-@media (min-width: 1024px) and (max-width: 1440px) {
-
+@media (min-width: 1024px) {
 
     
     .header__home,
@@ -39,8 +38,53 @@
                 width: 45%;
             }
     }
-
-// === Restaurant ===//
+    footer {
+       
+            display: flex;
+            flex-direction: row-reverse;
+            
+            height: 120px;
+            padding: 0 40px;
+            align-items: center;
+            background-color: rgb(55, 54, 54); /* Couleur de fond du footer */
+          }
+        
+          .footer__container {
+            display: flex;
+            width: 100%;
+            gap:20px;
+            padding-left: 550px;
+            
+            flex-direction: row;
+          }
+        
+          .footer__container_1 {
+            display: flex;
+            gap: 20px;
+           
+          }
+        
+          .footer__container_2 {
+            display: flex;
+            gap: 20px;
+            
+            align-items: center;
+          }
+        
+          .footer__container_2 p,
+          .footer__container_2 a {
+            margin-right: 15px;
+          }
+        
+          footer h4 {
+            margin-right: auto;
+          }
+        }
+          
+    
+       
+    
+// Restaurant //
 
     .resto_carte {
         width: 85%;
@@ -48,7 +92,7 @@
 
     
     
-}
+
 
 
   
