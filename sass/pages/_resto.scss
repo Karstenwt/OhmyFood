@@ -23,12 +23,28 @@
 
     }
 }
+.header__resto {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    position: relative; 
+    padding: 10px 20px;
+    width: 100%;
+}
+
 .header__resto img {
     display: block;
     height: auto;
     width: 180px;
-    margin: 0 auto;
-    
+    margin: 0 auto; 
+}
+
+.header__resto .fa-arrow-left {
+    position: absolute;
+    left: 20px;
+    bottom:20px; 
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .resto__carte {
