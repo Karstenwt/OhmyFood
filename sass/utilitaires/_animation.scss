@@ -1,55 +1,32 @@
-
 .heart__box {
     position: relative;
-    margin-right: 25px;
-    cursor: pointer;
+    width: 25px;
+}
 
-    .heart__full {
-        position: absolute;
-        font-size: 23px;
-        top: 0;
-        left: 0;
-        
-        background: linear-gradient(180deg, $primary-color, 30%,$secondary_color);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+.heart__empty {
+    position: absolute;
+    color: #101010; 
+    font-size: 24px;
+    transition: opacity 500ms; 
+}
 
-        &:hover {
-            z-index: 999;
-        }
-    
-        &::after {
-    
-            content: "f004";
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: #f4f4f4;
-        
-            height: 100%;
-            transition: all 1s;
-            
-        }
-    
-        &:hover::after {
-            height: 0%;
-            z-index: 999;
+.heart__full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; 
+    font-size: 24px;
+    background: linear-gradient(175deg, #FF79DA, #9356DC); 
+    background-clip: text;
+   
+    color: transparent; 
+    transition: opacity 500ms; }
 
-        }
-    }
-    
-    .heart__empty {
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-size: 23px;
-
-    
-        &:hover {
-            z-index: -999;
-        }
-        
-    }
+.heart__box:hover .heart__empty {
+    opacity: 0; 
+}
+.heart__box:hover .heart__full {
+    opacity: 1;
 }
 //==animation menu==//
 

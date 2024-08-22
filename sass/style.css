@@ -1,43 +1,35 @@
 @charset "UTF-8";
 .heart__box {
   position: relative;
-  margin-right: 25px;
-  cursor: pointer;
+  width: 25px;
 }
-.heart__box .heart__full {
+
+.heart__empty {
   position: absolute;
-  font-size: 23px;
+  color: #101010;
+  font-size: 24px;
+  transition: opacity 500ms;
+}
+
+.heart__full {
+  position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(180deg, #9356DC, 30%, #FF79DA);
+  opacity: 0;
+  font-size: 24px;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
           background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transition: opacity 500ms;
 }
-.heart__box .heart__full:hover {
-  z-index: 999;
+
+.heart__box:hover .heart__empty {
+  opacity: 0;
 }
-.heart__box .heart__full::after {
-  content: "f004";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #f4f4f4;
-  height: 100%;
-  transition: all 1s;
-}
-.heart__box .heart__full:hover::after {
-  height: 0%;
-  z-index: 999;
-}
-.heart__box .heart__empty {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 23px;
-}
-.heart__box .heart__empty:hover {
-  z-index: -999;
+
+.heart__box:hover .heart__full {
+  opacity: 1;
 }
 
 .entree__carte .carte__item {
@@ -422,11 +414,14 @@ footer h4 {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 1055px; /* Limite la largeur maximale à 1055px */
   margin: -30px auto 0px auto;
   border-radius: 30px;
   background-color: rgb(247, 244, 244);
+  box-sizing: border-box; /* Inclus padding et bordures dans la largeur totale */
 }
-.resto__carte .resto__title {
+
+.resto__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -436,7 +431,7 @@ footer h4 {
   font-family: "Shrikhand", cursive;
   padding: 30px 0;
 }
-.resto__carte .resto__title i {
+.resto__title i {
   font-size: 30px;
   margin-right: 30px;
   color: black;
@@ -539,8 +534,9 @@ footer h4 {
     display: flex;
     width: 100%;
     gap: 20px;
-    padding-left: 550px;
+    justify-content: flex-end;
     flex-direction: row;
+    margin-bottom: 10px;
   }
   .footer__container_1 {
     display: flex;

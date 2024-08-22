@@ -53,9 +53,9 @@
             display: flex;
             width: 100%;
             gap:20px;
-            padding-left: 550px;
-            
+            justify-content: flex-end;
             flex-direction: row;
+            margin-bottom: 10px;
           }
         
           .footer__container_1 {
