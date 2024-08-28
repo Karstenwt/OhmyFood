@@ -1,62 +1,61 @@
 .loader__container {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: white;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 20;
-    visibility: visible;
-    animation: fade 5s ease forwards; /* Combiner fade-in, stay-visible et fade-out */
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: white;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  visibility: visible;
+  animation: fade 5s ease forwards;
 }
 
 .loader {
-    position: relative;
-    width: 290px;
-    height: 290px;
-    border-radius: 50%; /* Loader en cercle */
-    background: $gradient-loader;
-    animation: rotate-gradient 3s infinite linear; /* Animation de rotation du cercle */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background: $gradient-loader;
+  animation: rotate-gradient 3s infinite linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.loader i{
-    position: relative;
-    font-size: 100px;
-    color: rgb(149, 32, 139); /* Couleur de l'icône */
-    z-index: 1;
+.loader i {
+  position: relative;
+  font-size: 100px;
+  color: rgb(149, 32, 139);
+  z-index: 1;
 }
 
 /* Animation pour faire tourner le cercle */
 @keyframes rotate-gradient {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-/* Animation combinée pour apparition, maintien et disparition */
 @keyframes fade {
-    0% {
-        opacity: 0;
-        visibility: visible;
-    }
-    10% {
-        opacity: 0.85;
-    }
-    80% {
-        opacity: 0.85;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden; /* Rendre le loader invisible à la fin */
-    }
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+  10% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.65;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
